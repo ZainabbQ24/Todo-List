@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/Spirited\ Away\ Studio\ Ghibli.jpg);
+    background-position: center 38%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+
+div.textContainer{
+width: 500px;
+height: 180px;
+position:relative;
+top: 10%;
+left: 1%;
+border-radius: 12px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+div.textContainer::before{
+    content:'';
+    position: absolute;
+    inset: -50%;
+    background:conic-gradient(
+        from 0deg,
+        transparent 0%,
+        #5fc6ce 15%,
+        transparent 30%);
+    animation: spin 3s linear infinite;
+}
+
+
+div.textContainer::after{
+    content:'';
+    position: absolute;
+    inset:3px;
+    background:#295e83;
+    border-radius:14px;
+}
+
+@keyframes spin {
+
+   to{
+    transform: rotate(360deg);
+   }
+
+}
+
+
+div.textContainer h1.title{
+    
+    color: white;
+    text-align: center;
+    font-size:max(20px,3vw);
+    max-width: 400px;
+    animation: FadeIn 3s infinite alternate;
+    text-wrap:no-wrap;
+    overflow: hidden;
+    z-index: 1;
+}
+
+@keyframes FadeIn {
+
+   0%{opacity: 0;}
+   100%{opacity: 1;}
+
+}
+
+button.homePagebtn{
+    position: absolute;
+    top: 37%;
+    left: 2.5%;
+    width:clamp(90px,10vw,120px);
+    height:clamp(35px,4vh,50px);
+    border-radius: 10px;
+    border: none;
+    background-color:#295e83;
+    color: white;
+    border: 1px solid #5fc6ce;
+     box-shadow:
+    0px 0px 10px 1px #5fc6ce,
+    0px 0px 40px 10px #295e83,
+    0px 0px 40px 10px #295e83 inset ;
+}
+
+button.homePagebtn:hover{
+   
+    cursor: pointer;
+    scale: 1.1;
+    transition:all 300ms linear;
+}
+

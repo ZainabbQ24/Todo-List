@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="date-container">
+
+        <header class="header">
+         <h1 class="mainTitle">Today’s Tasks</h1>
+         <p id="date"></p>
+        </header>
+
+    <div class="calendarContainer">
+    <button id="prev-btn" class="arrow-btn">&lt;</button>
+
+    <div id="calendar">
+
+    </div>
+
+    <button id="next-btn" class="arrow-btn">&gt;</button>
+
+        </div>
+
+        </div>
+
+    <div class="main-content">
+        <form id="todoForm">
+                    <div class="form-group">
+                        <input type="text" id="todoTitle" placeholder="Enter task title..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="todoDescription" placeholder="Enter task description (optional)"></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">Create Task</button>
+                    </div>
+
+                </form>
+
+    </div>
+
+    <div class="todoListContainer">
+
+        <h2>Your Tasks</h2>
+
+        <div id="todoList" class="todo-list">
+                    <!-- Todos will be dynamically added here -->
+        </div>
+    </div>
+
+    </div>
+    <script src="js/app.js" type="module" defer></script>
+    
+</body>
+</html>
